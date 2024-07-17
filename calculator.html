@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #a {
+            height: 50px;
+            width: 210px;
+            border: 1px solid black;
+        }
+
+        button {
+            height: 50px;
+            width: 50px;
+
+        }
+        input{
+            height: 35px;
+            width: 190px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="a"><input type="text" id="display"></div>
+    <button type="button" onclick="getValue('1')">1</button>
+    <button type="button" onclick="getValue('2')">2</button>
+    <button type="button" onclick="getValue('3')">3</button>
+    <button type="button" onclick="getValue('c')">c</button><br>
+    <button type="button" onclick="getValue('4')">4</button>
+    <button type="button" onclick="getValue('5')">5</button>
+    <button type="button" onclick="getValue('6')">6</button>
+    <button type="button" onclick="getValue('+')">+</button><br>
+    <button type="button" onclick="getValue('7')">7</button>
+    <button type="button" onclick="getValue('8')">8</button>
+    <button type="button" onclick="getValue('9')">9</button>
+    <button type="button" onclick="getValue('-')">-</button><br>
+    <button type="button" onclick="getValue('*')">*</button>
+    <button type="button" onclick="getValue('0')">0</button>
+    <button type="button" onclick="getValue('/')">/</button>
+    <button type="button" onclick="getValue('=')">=</button>
+    <script>
+
+        function getValue(a) {
+            const display = document.getElementById('display')
+            console.log(a);
+            if (a == 'c') {
+                display.value = "";
+            }
+            else if (a == "=") {
+                display.value = eval(display.value)
+            }
+            else (display.value += a) 
+        }
+
+    </script>
+</body>
+
+</html>
