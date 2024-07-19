@@ -6,59 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #a {
+        #bn {
+            margin-left: 38%;
+            margin-top: 180px;
+            
+        }
+
+        /* #a {
             height: 50px;
             width: 210px;
             border: 1px solid black;
-        }
+            margin: 3px;
+
+        } */
 
         button {
             height: 50px;
             width: 50px;
+            border-radius: 4px;
+            margin-top: 3px;
+            margin-left: 1.5px;
 
         }
-        input{
+
+        input {
             height: 35px;
             width: 190px;
             margin: 5px;
         }
+        #g {
+           height: 268px;
+           width: 220px; 
+           border: 2px solid black;
+           background-color: darkslategray;
+           border-radius: 8px;
+        }
+        body{
+            background-color:lightslategrey;
+        }
+         #display {
+            margin-left: 10px;
+            border-radius: 8px;
+         }
+         #c{
+            background-color:brown;
+         }
     </style>
 </head>
 
 <body>
+    <div id="bn">
+        <div id="g">
+            <div id="a"><input type="text" id="display"></div>
+            <button type="button" onclick="getValue('1')">1</button>
+            <button type="button" onclick="getValue('2')">2</button>
+            <button type="button" onclick="getValue('3')">3</button>
+            <button type="button" onclick="getValue('c')" id="c">c</button><br>
+            <button type="button" onclick="getValue('4')">4</button>
+            <button type="button" onclick="getValue('5')">5</button>
+            <button type="button" onclick="getValue('6')">6</button>
+            <button type="button" onclick="getValue('+')">+</button><br>
+            <button type="button" onclick="getValue('7')">7</button>
+            <button type="button" onclick="getValue('8')">8</button>
+            <button type="button" onclick="getValue('9')">9</button>
+            <button type="button" onclick="getValue('-')">-</button><br>
+            <button type="button" onclick="getValue('*')">*</button>
+            <button type="button" onclick="getValue('0')">0</button>
+            <button type="button" onclick="getValue('/')">/</button>
+            <button type="button" onclick="getValue('=')">=</button>
+            <script>
 
-    <div id="a"><input type="text" id="display"></div>
-    <button type="button" onclick="getValue('1')">1</button>
-    <button type="button" onclick="getValue('2')">2</button>
-    <button type="button" onclick="getValue('3')">3</button>
-    <button type="button" onclick="getValue('c')">c</button><br>
-    <button type="button" onclick="getValue('4')">4</button>
-    <button type="button" onclick="getValue('5')">5</button>
-    <button type="button" onclick="getValue('6')">6</button>
-    <button type="button" onclick="getValue('+')">+</button><br>
-    <button type="button" onclick="getValue('7')">7</button>
-    <button type="button" onclick="getValue('8')">8</button>
-    <button type="button" onclick="getValue('9')">9</button>
-    <button type="button" onclick="getValue('-')">-</button><br>
-    <button type="button" onclick="getValue('*')">*</button>
-    <button type="button" onclick="getValue('0')">0</button>
-    <button type="button" onclick="getValue('/')">/</button>
-    <button type="button" onclick="getValue('=')">=</button>
-    <script>
+                function getValue(a) {
+                    const display = document.getElementById('display')
+                    console.log(a);
+                    if (a == 'c') {
+                        display.value = "";
+                    }
+                    else if (a == "=") {
+                        display.value = eval(display.value)
+                    }
+                    else (display.value += a)
+                }
 
-        function getValue(a) {
-            const display = document.getElementById('display')
-            console.log(a);
-            if (a == 'c') {
-                display.value = "";
-            }
-            else if (a == "=") {
-                display.value = eval(display.value)
-            }
-            else (display.value += a) 
-        }
-
-    </script>
+            </script>
+        </div>
+    </div>
 </body>
 
 </html>
